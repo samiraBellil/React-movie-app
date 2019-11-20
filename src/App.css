@@ -1,0 +1,46 @@
+.App {
+  text-align: center;
+  margin-top: 25px;
+  /* background-color: grey; */
+  
+
+}
+
+.search-input{
+  border: 3px solid grey;
+  height: 20px;
+  width: 350px ;
+}
+.input-btn{
+  border: 3px solid grey;
+  height: 28px;
+}
+
+.movies{
+  /* margin-bottom: 20px; */
+  
+  margin-top: 10px;
+  
+  margin: 15px;
+  display: flex; 
+  flex-direction: column; 
+}
+ .title1{
+ 
+ text-align: center;
+
+} 
+.button-add{
+    font-family: fantasy;
+    margin-bottom: 20px;
+    height: 79px;
+    font-size: x-large;
+    color: #007bff;
+  }
+
+.img1{
+  height: 429px;
+  width:300px ;
+ 
+}  
+
