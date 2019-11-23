@@ -3,6 +3,7 @@ import './App.css';
 import Search from './Search';
 import MovieList from './MovieList';
 import StarRating from './StarRating';
+import Spinner from './Spinner';
 
 const movies = [
   {
@@ -56,16 +57,14 @@ class App extends React.Component {
       title: x
     })
   }
-
-
-
   render() {
     return (
       <div className="App">
         <Search InputChanges={x => this.InputChanges(x)} />
         <StarRating count={this.state.newRating} rateIt={newRate => this.rateMovie(newRate)} />
-        {this.state.movies.map(el => <MovieList elm={el} />)}
+        {this.state.movies.filter(el => el.rating >= this.state.newRating && el.title.toUpperCase().includes(this.state.title.toUpperCase().trim())).map(el => <MovieList elm={el} />)}
         <button className="button-add" onClick={this.add}> + add movie</button>
+        <Spinner/>
       </div>
     );
   }
